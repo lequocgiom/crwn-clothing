@@ -1,21 +1,13 @@
 import React from "react";
-
-import { Link } from "react-router-dom";
-
-import { ReactComponent as Logo } from "../../assets/crown.svg";
-
-import { auth } from "../../firebase/firebase.utils";
 import { connect } from "react-redux";
-import CartIcon from "../cart-icon/cart-icon.component";
-import CartDropdown from "../cart-dropdown/cart-dropdown.component";
-
 import { createStructuredSelector } from "reselect";
-
+import { ReactComponent as Logo } from "../../assets/crown.svg";
+import { auth } from "../../firebase/firebase.utils";
 import { selectCartHidden } from "../../redux/cart/cart.selectors";
-
 import { selectCurrentUser } from "../../redux/user/user.selector";
-
-import { HeaderContainer, LogoContainer, OptionsContainer, OptionDiv, OptionLink } from './header.styles';
+import CartDropdown from "../cart-dropdown/cart-dropdown.component";
+import CartIcon from "../cart-icon/cart-icon.component";
+import { HeaderContainer, LogoContainer, OptionDiv, OptionLink, OptionsContainer } from './header.styles';
 
 const Header = ({ currentUser, hidden }) => (
   <HeaderContainer>

@@ -44,10 +44,10 @@ firebase.initializeApp(firebaseConfig);
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
-const provider = new firebase.auth.GoogleAuthProvider();
-provider.setCustomParameters({ promt: "select_acount" });
+export const googleProvider = new firebase.auth.GoogleAuthProvider();
+googleProvider.setCustomParameters({ promt: "select_acount" });
 
-export const signInWithGoogle = () => auth.signInWithPopup(provider);
+export const signInWithGoogle = () => auth.signInWithPopup(googleProvider);
 
 export const addCollectionAndDocuments = async (
   collectionKey,
